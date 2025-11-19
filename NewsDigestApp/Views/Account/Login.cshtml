@@ -1,0 +1,73 @@
+﻿@model NewsDigestApp.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_LayoutAuth";
+}
+
+<div class="logo">
+    <i class="fas fa-newspaper"></i>
+    <h2>Welcome Back</h2>
+    <p class="text-muted">Sign in to continue to NewsDigest</p>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show">
+        <i class="fas fa-check-circle me-2"></i>@TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show">
+        <i class="fas fa-exclamation-circle me-2"></i>@TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<form method="post" asp-action="Login" asp-controller="Account">
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label fw-bold">Email Address</label>
+        <input asp-for="Email" class="form-control" placeholder="Enter your email">
+        <span asp-validation-for="Email" class="text-danger small"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label fw-bold">Password</label>
+        <input asp-for="Password" class="form-control" placeholder="Enter your password">
+        <span asp-validation-for="Password" class="text-danger small"></span>
+    </div>
+
+    <div class="mb-3 form-check">
+        <input asp-for="RememberMe" class="form-check-input" type="checkbox">
+        <label asp-for="RememberMe" class="form-check-label">Remember me</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">
+        <i class="fas fa-sign-in-alt me-2"></i>Sign In
+    </button>
+</form>
+
+<div class="divider">
+    <span>OR</span>
+</div>
+
+<div class="social-login">
+    <button class="btn">
+        <i class="fab fa-google me-2"></i>Continue with Google
+    </button>
+    <button class="btn">
+        <i class="fab fa-facebook me-2"></i>Continue with Facebook
+    </button>
+</div>
+
+<div class="text-center mt-4">
+    <p class="text-muted">
+        Don't have an account? 
+        <a href="@Url.Action("Register", "Account")" class="text-decoration-none fw-bold" style="color: #667eea;">Sign Up</a>
+    </p>
+    <a href="@Url.Action("Index", "Home")" class="text-muted small">
+        <i class="fas fa-arrow-left me-1"></i>Back to Home
+    </a>
+</div>

@@ -1,0 +1,288 @@
+﻿@model List<NewsDigestApp.Models.ReadingHistory>
+@{
+    ViewData["Title"] = "Reading History";
+}
+
+<div class="container my-5">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h2 class="fw-bold mb-1">
+                        <i class="fas fa-history me-2"></i>Reading History
+                    </h2>
+                    <p class="text-muted">Track your reading journey - @Model.Count articles read</p>
+                </div>
+                <div>
+                    <button class="btn btn-outline-danger me-2" onclick="clearHistory()">
+                        <i class="fas fa-trash me-2"></i>Clear History
+                    </button>
+                    <a href="/Dashboard" class="btn btn-outline-primary">
+                        <i class="fas fa-arrow-left me-2"></i>Back to Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="row g-4 mb-4">
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm text-center h-100">
+                <div class="card-body">
+                    <i class="fas fa-book-reader fa-3x text-primary mb-3"></i>
+                    <h3 class="mb-0">@Model.Count</h3>
+                    <p class="text-muted mb-0">Total Articles</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm text-center h-100">
+                <div class="card-body">
+                    <i class="fas fa-calendar-week fa-3x text-success mb-3"></i>
+                    <h3 class="mb-0">@Model.Where(h => h.ReadAt >= DateTime.Now.AddDays(-7)).Count()</h3>
+                    <p class="text-muted mb-0">This Week</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm text-center h-100">
+                <div class="card-body">
+                    <i class="fas fa-star fa-3x text-warning mb-3"></i>
+                    <h3 class="mb-0">@(Model.GroupBy(h => h.Category).OrderByDescending(g => g.Count()).Select(g => g.Key).FirstOrDefault() ?? "None")</h3>
+                    <p class="text-muted mb-0">Favorite Topic</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0 shadow-sm text-center h-100">
+                <div class="card-body">
+                    <i class="fas fa-smile fa-3x text-info mb-3"></i>
+                    <h3 class="mb-0">@(Model.Count > 0 ? (Model.Count(h => h.Sentiment == "positive") * 100 / Model.Count) : 0)%</h3>
+                    <p class="text-muted mb-0">Positive News</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Filter by Category</label>
+                    <select class="form-select" id="categoryFilter" onchange="filterHistory()">
+                        <option value="all">All Categories</option>
+                        <option value="technology">Technology</option>
+                        <option value="business">Business</option>
+                        <option value="sports">Sports</option>
+                        <option value="health">Health</option>
+                        <option value="science">Science</option>
+                        <option value="entertainment">Entertainment</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Filter by Sentiment</label>
+                    <select class="form-select" id="sentimentFilter" onchange="filterHistory()">
+                        <option value="all">All Sentiments</option>
+                        <option value="positive">Positive</option>
+                        <option value="negative">Negative</option>
+                        <option value="neutral">Neutral</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Search</label>
+                    <input type="text" class="form-control" id="searchBox" placeholder="Search articles..." onkeyup="filterHistory()">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title mb-4">
+                        <i class="fas fa-list me-2"></i>Your Reading Timeline
+                    </h5>
+
+                    @if (Model.Any())
+                    {
+                        <div class="timeline">
+                            @foreach (var item in Model)
+                            {
+                                var sentimentClass = item.Sentiment == "positive" ? "success" :
+                                item.Sentiment == "negative" ? "danger" : "warning";
+                                var sentimentIcon = item.Sentiment == "positive" ? "smile" :
+                                item.Sentiment == "negative" ? "frown" : "meh";
+                                var textClass = item.Sentiment == "neutral" ? "text-dark" : "text-white";
+
+                                <div class="timeline-item" data-category="@item.Category" data-sentiment="@item.Sentiment">
+                                    <div class="timeline-marker bg-@sentimentClass">
+                                        <i class="fas fa-@sentimentIcon @textClass"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <h6 class="mb-0 fw-bold">@item.ArticleTitle</h6>
+                                            <small class="text-muted">@item.ReadAt.ToString("MMM dd, yyyy HH:mm")</small>
+                                        </div>
+                                        <div class="d-flex gap-2 mb-2">
+                                            <span class="badge bg-primary">@item.Category</span>
+                                            <span class="badge bg-@sentimentClass @(item.Sentiment == "neutral" ? "text-dark" : "")">
+                                                <i class="fas fa-@sentimentIcon me-1"></i>@item.Sentiment
+                                            </span>
+                                        </div>
+                                        <a href="@item.ArticleUrl" target="_blank" class="btn btn-sm btn-outline-primary">
+                                            <i class="fas fa-external-link-alt me-1"></i>Read Again
+                                        </a>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="text-center py-5">
+                            <i class="fas fa-book-open fa-4x text-muted mb-3"></i>
+                            <h5 class="text-muted">No reading history yet</h5>
+                            <p class="text-muted">Start reading articles to build your history!</p>
+                            <a href="/Dashboard" class="btn btn-primary">
+                                <i class="fas fa-newspaper me-2"></i>Browse News
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function filterHistory() {
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const sentimentFilter = document.getElementById('sentimentFilter').value;
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+
+            const items = document.querySelectorAll('.timeline-item');
+            let visibleCount = 0;
+
+            items.forEach(item => {
+                const category = item.getAttribute('data-category');
+                const sentiment = item.getAttribute('data-sentiment');
+                const title = item.querySelector('h6').textContent.toLowerCase();
+
+                const categoryMatch = categoryFilter === 'all' || category === categoryFilter;
+                const sentimentMatch = sentimentFilter === 'all' || sentiment === sentimentFilter;
+                const searchMatch = searchTerm === '' || title.includes(searchTerm);
+
+                if (categoryMatch && sentimentMatch && searchMatch) {
+                    item.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        async function clearHistory() {
+            if (!confirm('⚠️ Are you sure you want to clear all your reading history? This cannot be undone!')) {
+                return;
+            }
+
+            try {
+                const response = await fetch('/Dashboard/ClearHistory', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    alert('✅ Reading history cleared successfully!');
+                    location.reload();
+                } else {
+                    alert('❌ Failed to clear history');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('❌ An error occurred');
+            }
+        }
+    </script>
+
+    <style>
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+            .timeline::before {
+                content: '';
+                position: absolute;
+                left: 15px;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: linear-gradient(to bottom, #667eea, #764ba2);
+            }
+
+        .timeline-item {
+            position: relative;
+            display: flex;
+            margin-bottom: 30px;
+            animation: slideIn 0.5s ease;
+        }
+
+        @@keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: -23px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .timeline-content {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-left: 20px;
+            flex: 1;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+            .timeline-content:hover {
+                transform: translateX(5px);
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            }
+
+        .card {
+            transition: transform 0.3s ease;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+    </style>
+}

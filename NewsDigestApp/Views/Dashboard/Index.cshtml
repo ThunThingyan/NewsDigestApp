@@ -1,0 +1,677 @@
+﻿@model NewsDigestApp.Models.UserPreferences
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container my-5">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h2 class="fw-bold mb-1">
+                        <i class="fas fa-newspaper me-2"></i>Welcome, @ViewBag.UserName
+                    </h2>
+                    <p class="text-muted">Your personalized news dashboard powered by AI</p>
+                </div>
+                <div>
+                    <a href="/Dashboard/ReadingHistory" class="btn btn-outline-primary me-2">
+                        <i class="fas fa-history me-2"></i>Reading History
+                    </a>
+                    <a href="/Account/Logout" class="btn btn-outline-danger">
+                        <i class="fas fa-sign-out-alt me-2"></i>Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Smart Recommendations Card -->
+    <div class="card border-0 shadow-sm mb-4 ai-card">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <h5 class="card-title mb-1">
+                        <i class="fas fa-robot me-2 text-primary"></i>AI Smart Recommendations
+                    </h5>
+                    <p class="text-muted mb-0 small">Let ML.NET learn from your reading habits</p>
+                </div>
+                <button class="btn btn-primary" onclick="autoAdjustPreferences()" id="aiAdjustBtn">
+                    <i class="fas fa-magic me-2"></i>Auto-Adjust Preferences
+                </button>
+            </div>
+
+            @if (ViewBag.SuggestedInterests != null && ViewBag.SuggestedInterests.Count > 0)
+            {
+                <div class="alert alert-info mb-0">
+                    <i class="fas fa-lightbulb me-2"></i>
+                    <strong>Suggested Topics:</strong> Based on your reading patterns, you might enjoy
+                    <strong>@string.Join(", ", ViewBag.SuggestedInterests)</strong>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-secondary mb-0">
+                    <i class="fas fa-info-circle me-2"></i>
+                    Start reading articles to get AI-powered recommendations!
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Reading Stats Card -->
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <h5 class="card-title">
+                <i class="fas fa-chart-line me-2 text-success"></i>Your Reading Stats
+            </h5>
+            <div class="row text-center mt-3">
+                <div class="col-md-4 col-4">
+                    <div class="stat-box">
+                        <h3 class="text-primary mb-0" id="articlesReadToday">
+                            <span class="spinner-border spinner-border-sm" role="status"></span>
+                        </h3>
+                        <small class="text-muted">Today</small>
+                    </div>
+                </div>
+                <div class="col-md-4 col-4">
+                    <div class="stat-box">
+                        <h3 class="text-success mb-0" id="articlesReadWeek">
+                            <span class="spinner-border spinner-border-sm" role="status"></span>
+                        </h3>
+                        <small class="text-muted">This Week</small>
+                    </div>
+                </div>
+                <div class="col-md-4 col-4">
+                    <div class="stat-box">
+                        <h3 class="text-info mb-0" id="articlesReadTotal">
+                            <span class="spinner-border spinner-border-sm" role="status"></span>
+                        </h3>
+                        <small class="text-muted">All Time</small>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3 text-center">
+                <a href="/Dashboard/ReadingHistory" class="btn btn-sm btn-outline-secondary">
+                    <i class="fas fa-history me-1"></i>View Full History
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preferences Card -->
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <h5 class="card-title mb-4">
+                <i class="fas fa-cog me-2"></i>Customize Your News Feed
+            </h5>
+
+            <!-- Interests Selection -->
+            <div class="mb-4">
+                <label class="form-label fw-bold">Select Your Interests</label>
+                <div class="row g-3">
+                    <div class="col-md-4 col-6">
+                        <div class="form-check interest-check">
+                            <input class="form-check-input" type="checkbox" name="interests" value="technology" id="tech" checked="@Model.Interests.Contains("technology")">
+                            <label class="form-check-label" for="tech">
+                                <i class="fas fa-laptop-code me-2 text-primary"></i>Technology
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="form-check interest-check">
+                            <input class="form-check-input" type="checkbox" name="interests" value="business" id="business" checked="@Model.Interests.Contains("business")">
+                            <label class="form-check-label" for="business">
+                                <i class="fas fa-briefcase me-2 text-success"></i>Business
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="form-check interest-check">
+                            <input class="form-check-input" type="checkbox" name="interests" value="sports" id="sports" checked="@Model.Interests.Contains("sports")">
+                            <label class="form-check-label" for="sports">
+                                <i class="fas fa-football-ball me-2 text-warning"></i>Sports
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="form-check interest-check">
+                            <input class="form-check-input" type="checkbox" name="interests" value="health" id="health" checked="@Model.Interests.Contains("health")">
+                            <label class="form-check-label" for="health">
+                                <i class="fas fa-heartbeat me-2 text-danger"></i>Health
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="form-check interest-check">
+                            <input class="form-check-input" type="checkbox" name="interests" value="science" id="science" checked="@Model.Interests.Contains("science")">
+                            <label class="form-check-label" for="science">
+                                <i class="fas fa-flask me-2 text-info"></i>Science
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="form-check interest-check">
+                            <input class="form-check-input" type="checkbox" name="interests" value="entertainment" id="entertainment" checked="@Model.Interests.Contains("entertainment")">
+                            <label class="form-check-label" for="entertainment">
+                                <i class="fas fa-film me-2 text-purple"></i>Entertainment
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Options -->
+            <div class="row g-3 mb-4">
+                <div class="col-md-4">
+                    <label class="form-label fw-bold">
+                        <i class="fas fa-language me-1"></i>Language
+                    </label>
+                    <select class="form-select" id="language">
+                        <option value="en" selected="@(Model.Language == "en")">English</option>
+                        <option value="es" selected="@(Model.Language == "es")">Spanish</option>
+                        <option value="fr" selected="@(Model.Language == "fr")">French</option>
+                        <option value="de" selected="@(Model.Language == "de")">German</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-bold">
+                        <i class="fas fa-smile me-1"></i>Sentiment Filter (ML.NET)
+                    </label>
+                    <select class="form-select" id="sentimentFilter">
+                        <option value="all" selected="@(Model.SentimentFilter == "all")">All News</option>
+                        <option value="positive" selected="@(Model.SentimentFilter == "positive")">😊 Positive Only</option>
+                        <option value="negative" selected="@(Model.SentimentFilter == "negative")">😟 Negative Only</option>
+                        <option value="neutral" selected="@(Model.SentimentFilter == "neutral")">😐 Neutral Only</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-bold">
+                        <i class="fas fa-list-ol me-1"></i>Max Articles
+                    </label>
+                    <select class="form-select" id="maxArticles">
+                        <option value="10" selected="@(Model.MaxArticles == 10)">10 Articles</option>
+                        <option value="20" selected="@(Model.MaxArticles == 20)">20 Articles</option>
+                        <option value="30" selected="@(Model.MaxArticles == 30)">30 Articles</option>
+                        <option value="50" selected="@(Model.MaxArticles == 50)">50 Articles</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Fetch Button -->
+            <div class="d-flex gap-2">
+                <button class="btn btn-primary btn-lg flex-grow-1" onclick="fetchNews()">
+                    <i class="fas fa-search me-2"></i>Fetch Personalized News
+                </button>
+                <button class="btn btn-outline-secondary btn-lg" onclick="clearCacheAndRefresh()" title="Clear cache and get fresh articles">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="text-center my-5" style="display: none;">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-3 text-muted fw-bold">
+            <i class="fas fa-brain me-2"></i>Analyzing sentiment with ML.NET...
+        </p>
+    </div>
+
+    <!-- News Container -->
+    <div class="row g-4" id="newsContainer">
+        <!-- Articles will be loaded here dynamically -->
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let currentArticles = [];
+        let articlesRead = 0;
+
+        // Fetch news based on user preferences
+        async function fetchNews() {
+            const interests = Array.from(document.querySelectorAll('input[name="interests"]:checked'))
+                .map(cb => cb.value);
+
+            if (interests.length === 0) {
+                showNotification('⚠️ Please select at least one interest', 'warning');
+                return;
+            }
+
+            const preferences = {
+                Interests: interests,
+                Language: document.getElementById('language').value,
+                SentimentFilter: document.getElementById('sentimentFilter').value,
+                MaxArticles: parseInt(document.getElementById('maxArticles').value)
+            };
+
+            console.log('🔍 Fetching news with preferences:', preferences);
+
+            document.getElementById('loadingSpinner').style.display = 'block';
+            document.getElementById('newsContainer').innerHTML = '';
+
+            try {
+                const response = await fetch('/Dashboard/GetNews', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(preferences)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                currentArticles = await response.json();
+                console.log(`✅ Received ${currentArticles.length} articles`);
+
+                if (currentArticles.length === 0) {
+                    document.getElementById('newsContainer').innerHTML =
+                        `<div class="col-12 text-center py-5">
+                            <i class="fas fa-newspaper fa-4x text-muted mb-3"></i>
+                            <h5 class="text-muted">No articles found matching your criteria</h5>
+                            <p class="text-muted">Try adjusting your filters or selecting different interests</p>
+                        </div>`;
+                } else {
+                    displayArticles(currentArticles);
+                    showNotification(`✅ Found ${currentArticles.length} articles!`, 'success');
+                }
+            } catch (error) {
+                console.error('❌ Error fetching news:', error);
+                document.getElementById('newsContainer').innerHTML =
+                    `<div class="col-12 text-center py-5">
+                        <i class="fas fa-exclamation-triangle fa-4x text-danger mb-3"></i>
+                        <h5 class="text-danger">Failed to fetch news</h5>
+                        <p class="text-muted">Please check your internet connection and try again</p>
+                        <button class="btn btn-primary mt-3" onclick="fetchNews()">
+                            <i class="fas fa-redo me-2"></i>Retry
+                        </button>
+                    </div>`;
+                showNotification('❌ Failed to fetch news. Please try again.', 'danger');
+            } finally {
+                document.getElementById('loadingSpinner').style.display = 'none';
+            }
+        }
+
+        // Display articles in cards
+        function displayArticles(articles) {
+            const container = document.getElementById('newsContainer');
+            container.innerHTML = '';
+
+            // Filter out articles with missing essential data
+            const validArticles = articles.filter(article =>
+                article.title &&
+                article.title !== '[Removed]' &&
+                article.url &&
+                article.url !== '' &&
+                article.description &&
+                article.description !== ''
+            );
+
+            console.log(`📰 Displaying ${validArticles.length} valid articles (filtered ${articles.length - validArticles.length} invalid)`);
+
+            if (validArticles.length === 0) {
+                container.innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <i class="fas fa-newspaper fa-4x text-muted mb-3"></i>
+                        <h5 class="text-muted">No valid articles found</h5>
+                        <p class="text-muted">Try different interests or filters</p>
+                    </div>
+                `;
+                return;
+            }
+
+            validArticles.forEach((article, index) => {
+                const sentimentClass = article.sentiment === 'positive' ? 'success' :
+                    article.sentiment === 'negative' ? 'danger' : 'warning text-dark';
+                const sentimentIcon = article.sentiment === 'positive' ? 'smile' :
+                    article.sentiment === 'negative' ? 'frown' : 'meh';
+
+                // Safely handle null/undefined values
+                const title = article.title || 'No title available';
+                const description = article.description || 'No description available';
+                const source = article.source || 'Unknown Source';
+                const url = article.url || '#';
+                const imageUrl = article.urlToImage || '';
+                const publishedDate = article.publishedAt ? new Date(article.publishedAt).toLocaleDateString() : 'Unknown date';
+
+                const card = `
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card news-card h-100 shadow-sm border-0">
+                            ${imageUrl ?
+                        `<img src="${imageUrl}" class="card-img-top" alt="${title}" style="height: 200px; object-fit: cover;"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'card-img-top bg-gradient d-flex align-items-center justify-content-center\\' style=\\'height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\\'><i class=\\'fas fa-newspaper fa-3x text-white\\'></i></div>';">` :
+                        `<div class="card-img-top bg-gradient d-flex align-items-center justify-content-center" style="height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <i class="fas fa-newspaper fa-3x text-white"></i>
+                                </div>`
+                    }
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="badge bg-primary">${source}</span>
+                                    <span class="badge bg-${sentimentClass}">
+                                        <i class="fas fa-${sentimentIcon}"></i> ${(article.sentiment || 'neutral').toUpperCase()}
+                                    </span>
+                                </div>
+                                <h5 class="card-title">${title}</h5>
+                                <p class="card-text text-muted small flex-grow-1">${description}</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <small class="text-muted">
+                                        <i class="far fa-calendar me-1"></i>${publishedDate}
+                                    </small>
+                                    <button class="btn btn-sm btn-outline-primary" onclick="trackAndOpen('${url}', ${index})">
+                                        <i class="fas fa-external-link-alt me-1"></i>Read More
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += card;
+            });
+        }
+
+        // CRITICAL: Track article reads and open URL
+        async function trackAndOpen(url, articleIndex) {
+            if (articleIndex >= 0 && articleIndex < currentArticles.length) {
+                const article = currentArticles[articleIndex];
+
+                console.log('📖 Tracking article read:', article.title);
+
+                // Track the article read in background
+                try {
+                    const trackResponse = await fetch('/Dashboard/TrackArticleRead', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(article)
+                    });
+
+                    if (trackResponse.ok) {
+                        console.log('✅ Article tracked successfully');
+                        articlesRead++;
+
+                        // Update stats immediately
+                        setTimeout(() => {
+                            updateReadingStats();
+                        }, 500);
+                    } else {
+                        console.error('❌ Failed to track article');
+                    }
+                } catch (error) {
+                    console.error('❌ Error tracking article:', error);
+                }
+            }
+
+            // Open article in new tab
+            if (url && url !== '#') {
+                window.open(url, '_blank');
+            }
+        }
+
+        // Update reading statistics
+        async function updateReadingStats() {
+            try {
+                const response = await fetch('/Dashboard/GetReadingStats');
+                if (response.ok) {
+                    const stats = await response.json();
+
+                    const todayEl = document.getElementById('articlesReadToday');
+                    const weekEl = document.getElementById('articlesReadWeek');
+                    const totalEl = document.getElementById('articlesReadTotal');
+
+                    if (todayEl) todayEl.textContent = stats.today || 0;
+                    if (weekEl) weekEl.textContent = stats.week || 0;
+                    if (totalEl) totalEl.textContent = stats.total || 0;
+
+                    console.log('📊 Stats updated:', stats);
+                }
+            } catch (error) {
+                console.error('❌ Error loading stats:', error);
+            }
+        }
+
+        // Auto-adjust preferences using AI/ML
+        async function autoAdjustPreferences() {
+            const btn = document.getElementById('aiAdjustBtn');
+            const originalText = btn.innerHTML;
+
+            if (!confirm('🤖 This will automatically adjust your preferences based on your reading history using ML.NET. Continue?')) {
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Analyzing...';
+
+            try {
+                const response = await fetch('/Dashboard/AutoAdjustPreferences', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showNotification('✅ ' + result.message, 'success');
+                    setTimeout(() => {
+                        location.reload(); // Reload to show updated preferences
+                    }, 1500);
+                } else {
+                    showNotification('⚠️ ' + result.message, 'warning');
+                }
+            } catch (error) {
+                console.error('❌ Error:', error);
+                showNotification('❌ An error occurred while adjusting preferences', 'danger');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+            }
+        }
+
+        // Clear cache and refresh news
+        async function clearCacheAndRefresh() {
+            try {
+                const response = await fetch('/Dashboard/ClearNewsCache', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showNotification('🔄 ' + result.message, 'success');
+                    // Automatically fetch fresh news
+                    setTimeout(() => {
+                        fetchNews();
+                    }, 500);
+                } else {
+                    showNotification('❌ ' + result.message, 'danger');
+                }
+            } catch (error) {
+                console.error('❌ Error:', error);
+                showNotification('❌ Failed to clear cache', 'danger');
+            }
+        }
+
+        // Show notification toast
+        function showNotification(message, type = 'info') {
+            const colors = {
+                success: '#28a745',
+                danger: '#dc3545',
+                warning: '#ffc107',
+                info: '#17a2b8'
+            };
+
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${colors[type]};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 9999;
+                animation: slideIn 0.3s ease;
+                max-width: 350px;
+            `;
+            notification.textContent = message;
+
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // Load reading stats on page load
+        async function loadReadingStats() {
+            await updateReadingStats();
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', function () {
+            console.log('🚀 Dashboard initialized');
+
+            // Load reading stats
+            loadReadingStats();
+
+            // Auto-load news if user has saved preferences
+            const savedInterests = document.querySelectorAll('input[name="interests"]:checked');
+            if (savedInterests.length > 0) {
+                console.log('✅ Auto-loading news with saved preferences...');
+                fetchNews();
+            }
+        });
+
+        // Add keyframe animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @@keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @@keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+    <style>
+        .stat-box {
+            padding: 20px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+            .stat-box:hover {
+                transform: translateY(-5px) scale(1.05);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            }
+
+            .stat-box h3 {
+                font-weight: 700;
+                font-size: 2rem;
+            }
+
+        .news-card {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+            .news-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+            }
+
+        .card {
+            border-radius: 15px;
+        }
+
+        .btn {
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+            .btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            }
+
+        .form-check-input:checked {
+            background-color: #667eea;
+            border-color: #667eea;
+        }
+
+        .interest-check {
+            padding: 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+            .interest-check:hover {
+                background: #f8f9fa;
+                transform: translateX(5px);
+            }
+
+        .text-purple {
+            color: #764ba2;
+        }
+
+        .ai-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+            .ai-card .card-title,
+            .ai-card .text-muted {
+                color: white !important;
+            }
+
+            .ai-card .btn-primary {
+                background: white;
+                color: #667eea;
+                border: none;
+            }
+
+                .ai-card .btn-primary:hover {
+                    background: #f8f9fa;
+                    color: #764ba2;
+                }
+
+        .bg-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card-img-top {
+            border-radius: 15px 15px 0 0;
+        }
+
+        #loadingSpinner {
+            animation: fadeIn 0.3s ease;
+        }
+
+        @@keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .badge {
+            padding: 0.5em 0.8em;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+    </style>
+}

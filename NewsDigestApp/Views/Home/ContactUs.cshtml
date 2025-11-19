@@ -1,0 +1,91 @@
+﻿@model NewsDigestApp.Models.ContactFormModel
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="contact-hero py-5 bg-gradient-primary text-white">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Get In Touch</h1>
+        <p class="lead">We'd love to hear from you</p>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm h-100 text-center">
+                <div class="card-body p-4">
+                    <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">Address</h5>
+                    <p class="text-muted">Marwadi University<br>Rajkot , Gujarat India</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm h-100 text-center">
+                <div class="card-body p-4">
+                    <i class="fas fa-phone fa-3x text-success mb-3"></i>
+                    <h5 class="card-title">Phone</h5>
+                    <p class="text-muted">+91 123-4567-891<br>Mon-Fri, 9AM-6PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm h-100 text-center">
+                <div class="card-body p-4">
+                    <i class="fas fa-envelope fa-3x text-warning mb-3"></i>
+                    <h5 class="card-title">Email</h5>
+                    <p class="text-muted">support@newsdigest.com<br>info@newsdigest.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg-8 mx-auto">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-5">
+                    <h3 class="mb-4 text-center">Send Us a Message</h3>
+
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show">
+                            <i class="fas fa-check-circle me-2"></i>@TempData["Success"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    }
+
+                    <form method="post" asp-action="ContactUs">
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label">Full Name</label>
+                            <input asp-for="Name" class="form-control form-control-lg" placeholder="John Doe">
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label">Email Address</label>
+                            <input asp-for="Email" class="form-control form-control-lg" placeholder="john@example.com">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Subject" class="form-label">Subject</label>
+                            <input asp-for="Subject" class="form-control form-control-lg" placeholder="How can we help?">
+                            <span asp-validation-for="Subject" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Message" class="form-label">Message</label>
+                            <textarea asp-for="Message" class="form-control form-control-lg" rows="5" placeholder="Your message here..."></textarea>
+                            <span asp-validation-for="Message" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,103 @@
+﻿@model NewsDigestApp.Models.RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_LayoutAuth";
+
+    // Get prefilled email from TempData if user was redirected from login
+    var prefilledEmail = TempData["PrefilledEmail"] as string;
+}
+
+<div class="logo">
+    <i class="fas fa-newspaper"></i>
+    <h2>Create Account</h2>
+    <p class="text-muted">Join NewsDigest today</p>
+</div>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show">
+        <i class="fas fa-info-circle me-2"></i>@TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+<form method="post" asp-action="Register" asp-controller="Account" id="registerForm">
+    <div class="mb-3">
+        <label asp-for="FullName" class="form-label fw-bold">Full Name</label>
+        <input asp-for="FullName" class="form-control" placeholder="John Doe">
+        <span asp-validation-for="FullName" class="text-danger small"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label fw-bold">Email Address</label>
+        <input asp-for="Email" class="form-control" placeholder="john@example.com"
+               value="@(prefilledEmail ?? Model?.Email)">
+        <span asp-validation-for="Email" class="text-danger small"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label fw-bold">Password</label>
+        <input asp-for="Password" class="form-control" placeholder="Create a strong password" id="password">
+        <div class="password-strength bg-secondary" id="strengthBar"></div>
+        <span asp-validation-for="Password" class="text-danger small"></span>
+        <small class="text-muted">Minimum 6 characters</small>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ConfirmPassword" class="form-label fw-bold">Confirm Password</label>
+        <input asp-for="ConfirmPassword" class="form-control" placeholder="Re-enter your password">
+        <span asp-validation-for="ConfirmPassword" class="text-danger small"></span>
+    </div>
+
+    <div class="mb-3 form-check">
+        <input class="form-check-input" type="checkbox" id="terms" required>
+        <label class="form-check-label" for="terms">
+            I agree to the <a href="#" class="text-decoration-none">Terms & Conditions</a>
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">
+        <i class="fas fa-user-plus me-2"></i>Create Account
+    </button>
+</form>
+
+<div class="text-center mt-4">
+    <p class="text-muted">
+        Already have an account?
+        <a href="@Url.Action("Login", "Account")" class="text-decoration-none fw-bold" style="color: #667eea;">Sign In</a>
+    </p>
+    <a href="@Url.Action("Index", "Home")" class="text-muted small">
+        <i class="fas fa-arrow-left me-1"></i>Back to Home
+    </a>
+</div>
+
+@section Scripts {
+    <script>
+        // Password strength indicator
+        const passwordInput = document.getElementById('password');
+        const strengthBar = document.getElementById('strengthBar');
+
+        if (passwordInput && strengthBar) {
+            passwordInput.addEventListener('input', function(e) {
+                const password = e.target.value;
+                let strength = 0;
+
+                if (password.length >= 6) strength++;
+                if (password.length >= 10) strength++;
+                if (/[A-Z]/.test(password)) strength++;
+                if (/[0-9]/.test(password)) strength++;
+                if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+                strengthBar.style.width = (strength * 20) + '%';
+
+                if (strength <= 2) {
+                    strengthBar.className = 'password-strength bg-danger';
+                } else if (strength <= 3) {
+                    strengthBar.className = 'password-strength bg-warning';
+                } else {
+                    strengthBar.className = 'password-strength bg-success';
+                }
+            });
+        }
+    </script>
+}

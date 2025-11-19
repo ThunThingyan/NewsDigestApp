@@ -1,0 +1,150 @@
+﻿@model NewsDigestApp.Models.UserProfile
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-sm border-0 text-center">
+                <div class="card-body p-4">
+                    <div class="profile-avatar mb-3">
+                        <i class="fas fa-user-circle fa-7x text-primary"></i>
+                    </div>
+                    <h4 class="mb-1">@Model.Name</h4>
+                    <p class="text-muted mb-3">@Model.Email</p>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+                            <i class="fas fa-edit me-2"></i>Edit Profile
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i>Profile Information</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="text-muted small">Full Name</label>
+                            <p class="fw-bold">@Model.Name</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="text-muted small">Email Address</label>
+                            <p class="fw-bold">@Model.Email</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="text-muted small">Phone Number</label>
+                            <p class="fw-bold">@(Model.Phone ?? "Not provided")</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="text-muted small">Country</label>
+                            <p class="fw-bold">@(Model.Country ?? "Not provided")</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label class="text-muted small">Bio</label>
+                            <p class="fw-bold">@(Model.Bio ?? "No bio added yet")</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm border-0 mt-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0"><i class="fas fa-cog me-2"></i>Account Settings</h5>
+                </div>
+                <div class="card-body">
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                        <label class="form-check-label" for="emailNotifications">Email Notifications</label>
+                    </div>
+              
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="autoRefresh" checked>
+                        <label class="form-check-label" for="autoRefresh">Auto-refresh News</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Profile Modal -->
+<div class="modal fade" id="editProfileModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="profileForm">
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="editName" value="@Model.Name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="editEmail" value="@Model.Email">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="editPhone" value="@Model.Phone">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Country</label>
+                        <input type="text" class="form-control" id="editCountry" value="@Model.Country">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Bio</label>
+                        <textarea class="form-control" id="editBio" rows="3">@Model.Bio</textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="saveProfile()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        async function saveProfile() {
+            const profile = {
+                name: document.getElementById('editName').value,
+                email: document.getElementById('editEmail').value,
+                phone: document.getElementById('editPhone').value,
+                country: document.getElementById('editCountry').value,
+                bio: document.getElementById('editBio').value
+            };
+
+            try {
+                const response = await fetch('/Profile/UpdateProfile', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(profile)
+                });
+
+                if (response.ok) {
+                    alert('Profile updated successfully!');
+                    location.reload();
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Failed to update profile');
+            }
+        }
+    </script>
+}

@@ -1,0 +1,613 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\services\\newsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\services\\newsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\views\\shared\\_layoutauth.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\views\\shared\\_layoutauth.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\models\\readinghistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\models\\readinghistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\newsdigestapp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\newsdigestapp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\services\\userpreferenceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\services\\userpreferenceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\services\\sentimentanalysisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\services\\sentimentanalysisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\models\\userpreferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\models\\userpreferences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\models\\newsapiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\models\\newsapiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\models\\contactformmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\models\\contactformmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\models\\newsarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\models\\newsarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\views\\dashboard\\readinghistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\views\\dashboard\\readinghistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\views\\home\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\views\\home\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\models\\registerviewmodelcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\models\\registerviewmodelcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|c:\\users\\thunt\\source\\repos\\newsdigestapp\\newsdigestapp\\models\\sentimentdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F64ED003-4022-4DDF-859B-254DC52FF66B}|NewsDigestApp\\NewsDigestApp.csproj|solutionrelative:newsdigestapp\\models\\sentimentdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "NewsDigestApp\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAPsAAAAAAAAAAAAcwBEBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T05:32:22.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "NewsDigestApp\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAUwHkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T05:54:41.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "NewsDigestApp\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "NewsDigestApp\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAADwAAAAAAAAAAAAcwEYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-08T05:45:02.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_LayoutAuth.cshtml",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Shared\\_LayoutAuth.cshtml",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Views\\Shared\\_LayoutAuth.cshtml",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Shared\\_LayoutAuth.cshtml",
+              "RelativeToolTip": "NewsDigestApp\\Views\\Shared\\_LayoutAuth.cshtml",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAcwJIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-09T05:04:00.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "NewsDigestApp\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-10T15:00:23.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Profile\\Index.cshtml",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Views\\Profile\\Index.cshtml",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Profile\\Index.cshtml",
+              "RelativeToolTip": "NewsDigestApp\\Views\\Profile\\Index.cshtml",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-08T05:42:52.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NewsService.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Services\\NewsService.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Services\\NewsService.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Services\\NewsService.cs",
+              "RelativeToolTip": "NewsDigestApp\\Services\\NewsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoBAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T06:54:24.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\appsettings.json",
+              "RelativeDocumentMoniker": "NewsDigestApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\appsettings.json",
+              "RelativeToolTip": "NewsDigestApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-08T05:35:41.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Program.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Program.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Program.cs",
+              "RelativeToolTip": "NewsDigestApp\\Program.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAcwDUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T05:36:23.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "NewsDigestApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-08T05:40:53.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "NewsDigestApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAcwDwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-08T05:40:23.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "NewsDigestApp\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-10T14:45:29.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ReadingHistory.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\ReadingHistory.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Models\\ReadingHistory.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\ReadingHistory.cs",
+              "RelativeToolTip": "NewsDigestApp\\Models\\ReadingHistory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T05:12:54.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\User.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\User.cs",
+              "RelativeToolTip": "NewsDigestApp\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T05:11:19.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "NewsDigestApp\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T05:12:16.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "NewsDigestApp\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAD0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-09T05:01:58.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "NewsDigestApp.http",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\NewsDigestApp.http",
+              "RelativeDocumentMoniker": "NewsDigestApp\\NewsDigestApp.http",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\NewsDigestApp.http",
+              "RelativeToolTip": "NewsDigestApp\\NewsDigestApp.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-11-10T07:22:21.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserPreferenceService.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Services\\UserPreferenceService.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Services\\UserPreferenceService.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Services\\UserPreferenceService.cs",
+              "RelativeToolTip": "NewsDigestApp\\Services\\UserPreferenceService.cs",
+              "ViewState": "AgIAANYAAAAAAAAAAAAwwCcBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T05:13:29.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SentimentAnalysisService.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Services\\SentimentAnalysisService.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Services\\SentimentAnalysisService.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Services\\SentimentAnalysisService.cs",
+              "RelativeToolTip": "NewsDigestApp\\Services\\SentimentAnalysisService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T05:39:46.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserPreferences.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\UserPreferences.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Models\\UserPreferences.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\UserPreferences.cs",
+              "RelativeToolTip": "NewsDigestApp\\Models\\UserPreferences.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T05:38:51.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserProfile.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\UserProfile.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Models\\UserProfile.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\UserProfile.cs",
+              "RelativeToolTip": "NewsDigestApp\\Models\\UserProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T05:38:00.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "NewsApiResponse.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\NewsApiResponse.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Models\\NewsApiResponse.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\NewsApiResponse.cs",
+              "RelativeToolTip": "NewsDigestApp\\Models\\NewsApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T05:38:37.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Models\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\LoginViewModel.cs",
+              "RelativeToolTip": "NewsDigestApp\\Models\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T05:53:27.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "NewsDigestApp\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T06:37:12.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ContactFormModel.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\ContactFormModel.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Models\\ContactFormModel.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\ContactFormModel.cs",
+              "RelativeToolTip": "NewsDigestApp\\Models\\ContactFormModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T05:37:47.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "NewsDigestApp\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAADwvxsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T05:36:42.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "NewsArticle.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\NewsArticle.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Models\\NewsArticle.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\NewsArticle.cs",
+              "RelativeToolTip": "NewsDigestApp\\Models\\NewsArticle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T05:38:12.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "NewsDigestApp\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T06:36:47.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "NewsDigestApp\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "NewsDigestApp\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-10T06:33:56.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ReadingHistory.cshtml",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Dashboard\\ReadingHistory.cshtml",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Views\\Dashboard\\ReadingHistory.cshtml",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Dashboard\\ReadingHistory.cshtml",
+              "RelativeToolTip": "NewsDigestApp\\Views\\Dashboard\\ReadingHistory.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-10T06:28:57.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "NewsDigestApp\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAAgBAAAAAAAAAAAqwBUBAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-08T05:41:50.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ContactUs.cshtml",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Home\\ContactUs.cshtml",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Views\\Home\\ContactUs.cshtml",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Home\\ContactUs.cshtml",
+              "RelativeToolTip": "NewsDigestApp\\Views\\Home\\ContactUs.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-08T05:43:35.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "NewsDigestApp\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAswGYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-09T05:02:16.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "NewsDigestApp\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAswKoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T05:37:35.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "RegisterViewModelcs.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\RegisterViewModelcs.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Models\\RegisterViewModelcs.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\RegisterViewModelcs.cs",
+              "RelativeToolTip": "NewsDigestApp\\Models\\RegisterViewModelcs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T05:53:58.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "NewsDigestApp\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\appsettings.Development.json",
+              "RelativeToolTip": "NewsDigestApp\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-08T05:48:13.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "SentimentData.cs",
+              "DocumentMoniker": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\SentimentData.cs",
+              "RelativeDocumentMoniker": "NewsDigestApp\\Models\\SentimentData.cs",
+              "ToolTip": "C:\\Users\\thunt\\source\\repos\\NewsDigestApp\\NewsDigestApp\\Models\\SentimentData.cs",
+              "RelativeToolTip": "NewsDigestApp\\Models\\SentimentData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T05:39:02.937Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
